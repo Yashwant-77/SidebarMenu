@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .sidebar {
+            background-color: black;
+            height: 100vh;
+            width: 250px;
+            position: absolute;
+            left: -250px;
+            transition: all .1s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+            font-size: 30px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar')
+            sidebar.style.left = 0;
+        }
+
+        function toggleSidebarAgain() {
+            var sidebar = document.querySelector('.sidebar')
+            sidebar.style.left = '-250px';
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <ul class="nav">
+            <button type="button" onclick=toggleSidebar()
+                style="background-color: blue; color: white; padding: 10px; margin-left: 10px;">Menu</button>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li onclick=toggleSidebarAgain() style="color: red; cursor: pointer;">ToggleSidebarAgain</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
